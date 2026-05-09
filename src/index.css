@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+
+  --text: #3d3a36;
+  --text-muted: #6b6560;
+  --text-strong: #1c1917;
+  --bg: #faf7f2;
+  --surface: #fffefb;
+  --surface-elevated: #ffffff;
+  --border: rgba(28, 25, 23, 0.12);
+  --border-strong: rgba(28, 25, 23, 0.22);
+  --code-bg: rgba(183, 83, 40, 0.08);
+  --chip-bg: rgba(183, 83, 40, 0.06);
+
+  --accent: #b45328;
+  --accent-hover: #9a4622;
+  --accent-contrast: #fffefb;
+
+  --shadow-card:
+    0 1px 2px rgba(28, 25, 23, 0.04),
+    0 8px 24px rgba(28, 25, 23, 0.06);
+
+  color-scheme: light;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text: #d6d3d1;
+    --text-muted: #a8a29e;
+    --text-strong: #fafaf9;
+    --bg: #121110;
+    --surface: #1c1917;
+    --surface-elevated: #292524;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --code-bg: rgba(251, 191, 36, 0.12);
+    --chip-bg: rgba(251, 191, 36, 0.08);
+
+    --accent: #fbbf24;
+    --accent-hover: #fcd34d;
+    --accent-contrast: #1c1917;
+
+    --shadow-card:
+      0 1px 2px rgba(0, 0, 0, 0.2),
+      0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
