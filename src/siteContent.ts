@@ -12,6 +12,21 @@ export const site = {
     x: 'https://x.com/Archit7373',
     resume: '/Archit-Ghevariya-Resume.pdf',
   },
+
+  /**
+   * Prefer transparent `.svg` / PNG and set `--graffiti-blend-mode: normal` in `index.css`.
+   * If files are black-matte rasters, use `screen` instead (see comment on that variable).
+   */
+  graffiti: {
+    react: '/graffiti-react.png',
+    node: '/graffiti-node.png',
+    python: '/graffiti-python.png',
+    coffee: '/graffiti-coffee.png',
+    aws: '/graffiti-aws.png',
+    mongodb: '/graffiti-mongodb.png',
+    java: '/graffiti-java.png',
+  },
+
   stats: [
     { label: 'Experience', value: '2+ years' },
     { label: 'Apprenticeships', value: '3 roles' },
@@ -51,6 +66,42 @@ export const site = {
     'Git',
     'GitHub',
     'Linux',
+  ],
+  education: [
+    {
+      degree: "Master's in Information Technology (Professional Computing)",
+      school: 'Swinburne University of Technology',
+      period: 'Feb 2024 - Nov 2025',
+      location: 'Melbourne, Australia',
+      note: 'GPA: 8.9',
+    },
+    {
+      degree: "Bachelor's in Information Technology",
+      school: 'Veer Narmad South Gujarat University',
+      period: 'Jul 2020 - Mar 2023',
+      location: 'India',
+      note: 'GPA: 8.23',
+    },
+  ],
+  experience: [
+    {
+      role: 'Full Stack Developer (Apprenticeship)',
+      company: 'Clock Solutions',
+      period: 'Jul 2025 - Dec 2025',
+      location: 'Melbourne, Australia',
+    },
+    {
+      role: 'Full-Stack Web Developer (MERN Stack)',
+      company: 'Lexicon Solution',
+      period: '2022 - 2024',
+      location: 'India',
+    },
+    {
+      role: 'Full-Stack Developer (Apprenticeship)',
+      company: 'Jainam Broking Limited',
+      period: 'Nov 2022 - Mar 2023',
+      location: 'India',
+    },
   ],
   projects: [
     {

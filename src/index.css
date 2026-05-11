@@ -5,6 +5,20 @@
   --font-body: 'Source Sans 3', system-ui, sans-serif;
   --mono: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
 
+  /** Base “wall” / site backdrop (matches provided swatch) */
+  --wall-base: #0f0e10;
+
+  /**
+   * Graffiti sprites (public/graffiti-*).
+   * - normal: real transparent PNG/SVG (alpha). Do not pair with heavy CSS filters
+   *   on .graffiti-icon or a black/white “matte” can look like a solid tile.
+   * - screen: black-matte rasters only (knocks out #000). Do not use brightness/
+   *   contrast to “fix” them — that turns the matte into a gray/white rectangle.
+   * - multiply: white-matte rasters (knocks out white).
+   */
+  --graffiti-blend-mode: normal;
+  --graffiti-opacity: 1;
+
   --text: #3d3a36;
   --text-muted: #6b6560;
   --text-strong: #1c1917;
@@ -46,7 +60,7 @@ html {
     --text: #d6d3d1;
     --text-muted: #a8a29e;
     --text-strong: #fafaf9;
-    --bg: #121110;
+    --bg: var(--wall-base);
     --surface: #1c1917;
     --surface-elevated: #292524;
     --border: rgba(255, 255, 255, 0.1);
@@ -79,12 +93,16 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  max-width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  position: relative;
 }
 
 main {
   flex: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
 }
 
 h1,
